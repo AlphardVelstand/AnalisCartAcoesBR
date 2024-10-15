@@ -1,4 +1,5 @@
-﻿altair==4.2.2
+#Tem que excluir a biblioteca pywin32==307, senao da erro
+altair==4.2.2
 attrs==24.2.0
 beautifulsoup4==4.12.3
 blinker==1.8.2
