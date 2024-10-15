@@ -7,8 +7,8 @@ import datetime
 import markdown
 
 
-today = datetime.datetime.now()
-print("HOJE", today)
+today = datetime.datetime.now()#criando a variavel que pega a data de hoje
+#print("HOJE", today)
 
 # Criar as funções de carregamento de dados
 # cotaçoes
@@ -16,7 +16,7 @@ print("HOJE", today)
 def carregar_dados(empresas):
     texto_tickers = " ".join(empresas)
     dados_acao = yf.Tickers(texto_tickers)
-    cotacoes_acao = dados_acao.history(period="1d", start="2010-01-01", end="2024-10-14")
+    cotacoes_acao = dados_acao.history(period="1d", start="2010-01-01", end=today)
     cotacoes_acao = cotacoes_acao["Close"]
     return cotacoes_acao
 
